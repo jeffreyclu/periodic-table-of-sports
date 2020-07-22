@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0.5rem;
+  transition: transform 0.4s;
+  border-radius: 1rem;
+  width: 12rem;
+  height: 17.5rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.5, 1.5);
+  z-index: 1;
+  border: 0.2rem solid white;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.label {
+  margin: 0rem 0.2rem;
+  font-size: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.symbol {
+  margin: 2rem;
+  font-size: 6rem;
+}
+
+.sport {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.participants {
+  font-size: 1rem;
+}
+
+.gender {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  font-size: 0.5rem;
+}
