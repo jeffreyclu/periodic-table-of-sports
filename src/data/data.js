@@ -9,15 +9,17 @@ const data = {
         college: true,
         youth: true,
         symbol: 'G',
-        sport: 'Golf',
+        sport: 'Golfing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual"
       },
     ],
     [
       {
         category: "orange",
-        professional: true,
+        professional: false,
         olympic: true,
         paralympic: true,
         college: true,
@@ -26,6 +28,9 @@ const data = {
         sport: 'Table Tennis',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
+        levelOfContact: 'full',
       },
       {
         category: "orange",
@@ -38,6 +43,8 @@ const data = {
         sport: 'Squash',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "orange",
@@ -50,6 +57,8 @@ const data = {
         sport: 'RacquetBall',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "orange",
@@ -62,6 +71,8 @@ const data = {
         sport: 'Badminton',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "orange",
@@ -74,6 +85,8 @@ const data = {
         sport: 'Tennis',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
     ],
     [
@@ -88,6 +101,8 @@ const data = {
         sport: 'Shooting',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "blue",
@@ -100,6 +115,8 @@ const data = {
         sport: 'Archery',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "blue",
@@ -112,6 +129,8 @@ const data = {
         sport: 'Boccia',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "blue",
@@ -124,6 +143,8 @@ const data = {
         sport: 'Bowling',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "blue",
@@ -136,6 +157,8 @@ const data = {
         sport: 'Curling',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -150,6 +173,8 @@ const data = {
         sport: 'Mixed Martial Arts',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -162,6 +187,8 @@ const data = {
         sport: 'Judo',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -174,6 +201,8 @@ const data = {
         sport: 'Taekwondo',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -186,6 +215,8 @@ const data = {
         sport: 'Karate',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -198,6 +229,8 @@ const data = {
         sport: 'Wrestling',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -210,6 +243,8 @@ const data = {
         sport: 'Boxing',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
     ],
     [
@@ -224,6 +259,8 @@ const data = {
         sport: 'Fencing',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -236,6 +273,8 @@ const data = {
         sport: 'Weightlifting',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "green",
@@ -248,6 +287,8 @@ const data = {
         sport: 'eSports',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -262,6 +303,8 @@ const data = {
         sport: 'Synchronized Swimming',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "grey",
@@ -274,6 +317,8 @@ const data = {
         sport: 'Diving',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -286,6 +331,8 @@ const data = {
         sport: 'Synchronized Diving',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "grey",
@@ -298,6 +345,8 @@ const data = {
         sport: 'Rhythmic Gymnastics',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -310,6 +359,8 @@ const data = {
         sport: 'Artistic Gymnastics',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
     ],
     [
@@ -324,6 +375,8 @@ const data = {
         sport: 'Surfing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -336,6 +389,8 @@ const data = {
         sport: 'Ski Jumping',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -348,6 +403,8 @@ const data = {
         sport: 'Climbing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -360,6 +417,8 @@ const data = {
         sport: 'Figure Skating',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "grey",
@@ -369,9 +428,11 @@ const data = {
         college: true,
         youth: true,
         symbol: 'Fs',
-        sport: 'Freestyle Skating',
+        sport: 'Freestyle Skiing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
     ],
     [
@@ -386,6 +447,8 @@ const data = {
         sport: 'Swimming',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -398,6 +461,8 @@ const data = {
         sport: 'Cross Country Running',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -406,10 +471,12 @@ const data = {
         paralympic: true,
         college: true,
         youth: true,
-        symbol: 'Sd',
-        sport: 'Synchronized Diving',
+        symbol: 'Ma',
+        sport: 'Marathon',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -418,10 +485,12 @@ const data = {
         paralympic: true,
         college: true,
         youth: true,
-        symbol: 'Rg',
-        sport: 'Rhythmic Gymnastics',
+        symbol: 'Tr',
+        sport: 'Triathlon',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -430,10 +499,12 @@ const data = {
         paralympic: true,
         college: true,
         youth: true,
-        symbol: 'G',
-        sport: 'Artistic Gymnastics',
+        symbol: 'Tf',
+        sport: 'Track & Field',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
     ],
     [
@@ -448,6 +519,8 @@ const data = {
         sport: 'Downhill Skiing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -460,6 +533,8 @@ const data = {
         sport: 'Snowboarding',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -472,6 +547,8 @@ const data = {
         sport: 'Cross Country Skiing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -484,6 +561,8 @@ const data = {
         sport: 'Speed Skating',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
     ],
     [
@@ -498,6 +577,8 @@ const data = {
         sport: 'Skeleton',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -510,6 +591,8 @@ const data = {
         sport: 'Luge',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -522,6 +605,8 @@ const data = {
         sport: 'Bobsleigh',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -536,6 +621,8 @@ const data = {
         sport: 'BMX Biking',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -548,6 +635,8 @@ const data = {
         sport: 'Mountain Biking',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -560,6 +649,8 @@ const data = {
         sport: 'Road Cycling',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -572,6 +663,8 @@ const data = {
         sport: 'Track Cycling',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
     ],
     [
@@ -586,6 +679,8 @@ const data = {
         sport: 'Sailing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "red",
@@ -598,6 +693,8 @@ const data = {
         sport: 'Canoe Slalom',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -610,6 +707,8 @@ const data = {
         sport: 'Canoe Sprint',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -622,6 +721,8 @@ const data = {
         sport: 'Rowing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -636,6 +737,8 @@ const data = {
         sport: 'Rodeo',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -648,6 +751,8 @@ const data = {
         sport: 'Equestrian',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -660,6 +765,8 @@ const data = {
         sport: 'Horse Racing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
     ],
     [
@@ -674,6 +781,8 @@ const data = {
         sport: 'Motocross',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -686,6 +795,8 @@ const data = {
         sport: 'Drag Racing',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -698,6 +809,8 @@ const data = {
         sport: 'Nascar',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -710,6 +823,8 @@ const data = {
         sport: 'Formula One',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "individual",
       },
       {
         category: "red",
@@ -722,6 +837,8 @@ const data = {
         sport: 'eSports',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -736,6 +853,8 @@ const data = {
         sport: 'Volleyball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -748,6 +867,8 @@ const data = {
         sport: 'Beach Volleyball',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -760,6 +881,8 @@ const data = {
         sport: 'Goalball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -772,6 +895,8 @@ const data = {
         sport: 'eSports',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
     ],
     [
@@ -786,6 +911,8 @@ const data = {
         sport: 'Soccer',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -798,6 +925,8 @@ const data = {
         sport: 'Water Polo',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -810,6 +939,8 @@ const data = {
         sport: 'Handball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -822,6 +953,8 @@ const data = {
         sport: 'Basketball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
     ],
     [
@@ -836,6 +969,8 @@ const data = {
         sport: 'Rugby',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -848,6 +983,8 @@ const data = {
         sport: 'Football',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -860,6 +997,8 @@ const data = {
         sport: 'Lacrosse',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -872,6 +1011,8 @@ const data = {
         sport: 'Ice Hockey',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
     ],
     [
@@ -886,6 +1027,8 @@ const data = {
         sport: 'Soccer',
         gender: 'U',
         participants: 1,
+        location: "outdoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -898,6 +1041,8 @@ const data = {
         sport: 'Water Polo',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -910,6 +1055,8 @@ const data = {
         sport: 'Handball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
       {
         category: "skyblue",
@@ -922,6 +1069,8 @@ const data = {
         sport: 'Basketball',
         gender: 'U',
         participants: 1,
+        location: "indoor",
+        participantType: "team",
       },
     ],
   ]

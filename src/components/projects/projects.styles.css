@@ -8,8 +8,9 @@
   width: 30vw;
   box-sizing: border-box;
   padding: 4rem;
-  box-shadow: 10px 10px 10px black;
+  box-shadow: -10px 10px 15px #353535;
   z-index: 2;
+  animation: flyin 0.3s;
 }
 
 .x {
@@ -27,4 +28,9 @@
 img {
   width: 100%;
   margin: 3rem 0;
+}
+
+@keyframes flyin {
+  0% {transform: translateX(30vw);}
+  100%{transform: translateX(0);}
 }

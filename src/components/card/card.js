@@ -4,7 +4,7 @@ import './card.styles.css';
 
 const Label = ({ text }) => (<span className="label">{text}</span>);
 
-const Card = ({ data, setClick, clicked, setKeyword }) => {
+const Card = ({ data, setClick, filter }) => {
   const {
     category,
     professional,
@@ -15,13 +15,30 @@ const Card = ({ data, setClick, clicked, setKeyword }) => {
     symbol,
     sport,
     participants,
-    gender
+    gender,
+    location,
+    participantType,
   } = data;
+
   const cardStyle = {
     backgroundColor: `${category}`
   };
+
+  let hidden;
+  switch(filter) {
+    case 'locationFilter':
+      hidden = location === 'indoor' ? true : false;
+      break;
+    case 'participantTypeFilter':
+      hidden = participantType === 'individual' ? true : false;
+      break;
+    default:
+      hidden = false;
+      break;
+  }
+
   return(
-    <div className="card" style={cardStyle} onClick={() => setClick({ clicked: true, keyword: sport.split(" ") })}>
+    <div className={hidden ? "card hidden" : "card"} style={cardStyle} onClick={() => setClick({ clicked: true, keyword: sport.split(" ") })}>
       <div className="header">
         {professional && <Label text={"Pro"} />}
         {olympic && <Label text={"Oly"} />}

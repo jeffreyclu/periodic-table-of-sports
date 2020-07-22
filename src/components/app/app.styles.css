@@ -3,5 +3,32 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-end;
-  /* height: 100vh; */
+}
+
+.Container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-top: 1px solid white;
+}
+
+.Footer h2 {
+  color: white;
+  margin: 2rem 1rem 0 1rem;
+  padding: 0;
+}
+
+.filterLabel {
+  position: fixed;
+  color: lightgrey;
+  z-index: 1;
+  top: 1rem;
+  left: 1rem;
+  font-size: 4rem;
 }
