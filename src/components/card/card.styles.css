@@ -1,5 +1,14 @@
 .hidden {
-  opacity: 0.5;
+  opacity: 0;
+}
+
+.filtered {
+  opacity: 0.1;
+}
+
+.selected {
+  text-decoration: underline;
+  color: rgb(255,255,255) !important;
 }
 
 .card {
@@ -32,7 +41,7 @@
 .label {
   margin: 0rem 0.2rem;
   font-size: 0.5rem;
-  color: white;
+  color: rgb(201, 201, 201);
   font-weight: bold;
 }
 

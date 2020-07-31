@@ -2,5 +2,10 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  max-height: 100vh;
+}
+
+.type {
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
 }

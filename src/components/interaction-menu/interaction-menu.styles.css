@@ -1,0 +1,10 @@
+.Menu {
+  border-right: 1px solid white;
+  height: 100vh;
+  padding: 1rem;
+  max-width: 17rem;
+}
+
+.Menu h2 {
+  color: white;
+}

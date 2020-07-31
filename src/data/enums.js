@@ -1,0 +1,26 @@
+const enums = {
+  sportName: 'Sport Name',
+  symbol: 'Symbol',
+  type: 'Type',
+  color: 'Color',
+  team: 'Team',
+  youth: 'Youth',
+  college: 'College',
+  professional: 'Pro',
+  olympic: 'Olympic',
+  paralympic: 'Paralympic',
+  eSport: 'Esport',
+  racing: 'Racing',
+  water: 'Water',
+  location: 'Location',
+  winter: 'Winter Sport',
+  gender: 'Men/Women/Unisex',
+  minParticipants: 'Min Participants (per side)',
+  maxParticipants: 'Max Participants (per side)',
+  cost: 'Cost (1-5)',
+  contact: 'Contact (1-5)',
+  crowdSize: 'Crowd Size (1-5)',
+  intensity: 'Intensity',
+}
+
+export default enums;
