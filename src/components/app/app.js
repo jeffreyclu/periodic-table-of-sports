@@ -6,7 +6,6 @@ import InteractionMenu from '../interaction-menu/interaction-menu';
 import './app.styles.css';
 import * as newData from '../../data/data.json';
 import enums from '../../data/enums';
-import UpArrow from './long-arrow-pointing-up.svg';
 
 
 const App = () => {
@@ -30,7 +29,6 @@ const App = () => {
       />)
     setCards(cardArray);
   }, [clicked, filter, sort]);
-  
   const groupBy = (array, key) => {
     return array.reduce((acc, curr) => {
       (acc[curr[key]] = acc[curr[key]] || []).push(curr);
@@ -46,7 +44,7 @@ const App = () => {
 
   return (
     <div className="AppContainer">
-      <h1>Periodic Table of Sports</h1>
+      {/* <h1>Periodic Table of Sports</h1> */}
       <div className="App">
         <InteractionMenu 
           filter={filter} 
