@@ -53,10 +53,6 @@ const App = () => {
           setFilter={setFilter} 
           setSort={setSort} />
         <div className='CardContainer'>
-          <div>
-            <p>Lower Intensity</p>
-            <img src={UpArrow} alt='Up Arrow' />
-          </div>
           {filter.length > 0 && <span className='FilterLabel'>{filter} filter on</span>}
           {cards}
           {clicked.clicked && <InfoMenu setClick={setClick} clicked={clicked} />}
