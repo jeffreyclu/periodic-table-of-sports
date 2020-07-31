@@ -7,11 +7,10 @@ import './app.styles.css';
 import * as newData from '../../data/data.json';
 import enums from '../../data/enums';
 
-
 const App = () => {
   const [cards, setCards] = useState([]);
   const [clicked, setClick] = useState({ clicked: false, keyword: [], data: {} });
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState({ clicked: false, filter: '' });
   const [sort, setSort] = useState(enums.type);
   
   useEffect(() => {
@@ -37,8 +36,8 @@ const App = () => {
   }
 
   const intensitySort = (a, b) => {
-    const aIntensity = parseInt(a[enums.contact]) + parseInt(a[enums.cost]) + parseInt(a[enums.crowdSize]);
-    const bIntensity = parseInt(b[enums.contact]) + parseInt(b[enums.cost]) + parseInt(b[enums.crowdSize]);
+    const aIntensity = parseInt(a[enums.intensity]);
+    const bIntensity = parseInt(b[enums.intensity]);
     return (aIntensity - bIntensity);
   }
 
@@ -51,7 +50,8 @@ const App = () => {
           setFilter={setFilter} 
           setSort={setSort} />
         <div className='CardContainer'>
-          {filter.length > 0 && <span className='FilterLabel'>{filter} filter on</span>}
+          {filter.length > 0 && <span className='Filter StatusLabel'>Filtered by: {filter}</span>}
+          <span className='Sort StatusLabel'>Sorted by: {sort}</span>
           {cards}
           {clicked.clicked && <InfoMenu setClick={setClick} clicked={clicked} />}
         </div>

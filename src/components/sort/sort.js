@@ -1,9 +1,10 @@
 import React from 'react';
+import './sort-styles.css';
 
 const Sort = ({ sort, setSort }) => {
   return (
     <button 
-      className="filter" 
+      className="sort" 
       type="submit" 
       onClick={() =>setSort(sort)}>{sort}</button>)
 };

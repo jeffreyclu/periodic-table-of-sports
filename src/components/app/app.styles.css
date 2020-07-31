@@ -22,11 +22,19 @@
   height: 100vh;
 }
 
-.FilterLabel {
-  top: 1rem;
-  left: 1rem;
+.StatusLabel {
   position: absolute;
   color: lightgrey;
   z-index: 1;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.Sort {
+  top: 1rem;
+  left: 1rem;
+}
+
+.Filter {
+  top: 6rem;
+  left: 1rem;
 }

@@ -19,3 +19,8 @@ code {
 html {
  font-size: 62.5%;
 }
+
+button {
+  box-sizing: border-box;
+  outline: none;
+}

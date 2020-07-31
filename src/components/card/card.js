@@ -19,6 +19,9 @@ const Label = ({ text, hidden, selected }) => {
   return (<span className={labelStyle.className}>{text}</span>)
 };
 
+/**
+ * card component
+ */
 const Card = ({ data, setClick, filter }) => {
 
   const cardStyle = {
@@ -50,6 +53,8 @@ const Card = ({ data, setClick, filter }) => {
 
   let filtered;
 
+  console.log('filter->', filter)
+
   switch(filter) {
     case (enums.team):
       filtered = data[enums.team] ? false : true;
@@ -69,8 +74,41 @@ const Card = ({ data, setClick, filter }) => {
     case (enums.college):
       filtered = data[enums.college] ? false : true;
       break;
+    case (enums.pool):
+      filtered = data[enums.pool] ? false : true;
+      break;
+    case (enums.openWater):
+      filtered = data[enums.openWater] ? false : true;
+      break;
+    case (enums.indoor):
+      filtered = data[enums.indoor] ? false : true;
+      break;
+    case (enums.outdoor):
+      filtered = data[enums.outdoor] ? false : true;
+      break;
+    case (enums.digital):
+      filtered = data[enums.digital] ? false : true;
+      break;
+    case (enums.winterSport):
+      filtered = data[enums.winterSport] ? false : true;
+      break;
+    case (enums.eSport):
+      filtered = data[enums.eSport] ? false : true;
+      break;
+    case (enums.racing):
+      filtered = data[enums.racing] ? false : true;
+      break;
+    case (enums.location):
+      filtered = data[enums.racing] ? false : true;
+      break;
     case (enums.crowdSize):
       filtered = parseInt(data[enums.crowdSize]) > 3 ? false : true;
+      break;
+    case (enums.cost):
+      filtered = parseInt(data[enums.cost]) > 3 ? false : true;
+      break;
+    case (enums.intensity):
+      filtered = parseInt(data[enums.intensity]) > 8 ? false : true;
       break;
     default:
       break;
@@ -84,8 +122,8 @@ const Card = ({ data, setClick, filter }) => {
       style={cardStyle} 
       onClick={() => setClick({ 
         clicked: true, 
-        keyword: 
-        data[enums.sportName].split(" ") 
+        keyword: data[enums.sportName].split(" "),
+        data: data,
       })}>
 
       <div className="header">
