@@ -8,19 +8,19 @@ import enums from '../../data/enums';
  */
 const Label = ({ text, hidden, selected }) => {
   const labelStyle = {
-    className: 'label',
+    className: 'Label',
   }
   if (hidden) {
-    labelStyle.className += ' hidden';
+    labelStyle.className += ' Hidden';
   }
   if (selected) {
-    labelStyle.className += ' selected';
+    labelStyle.className += ' Selected';
   }
   return (<span className={labelStyle.className}>{text}</span>)
 };
 
 /**
- * card component
+ * Card component
  */
 const Card = ({ data, setClick, filter }) => {
 
@@ -55,8 +55,6 @@ const Card = ({ data, setClick, filter }) => {
   }
 
   let filtered;
-
-  // console.log('filter->', filter)
 
   switch(filter) {
     case (enums.team):
@@ -117,11 +115,12 @@ const Card = ({ data, setClick, filter }) => {
       break;
   }
 
+  // only show the max number of participants rather than the range
   const numParticipants = `${data[enums.minParticipants]} ${(data[enums.maxParticipants] - data[enums.minParticipants]) ? '-' + data[enums.maxParticipants] : ''}`;
 
   return(
     <div 
-      className={filtered ? 'card filtered': 'card'} 
+      className={filtered ? 'Card Filtered': 'Card'} 
       style={cardStyle} 
       onClick={() => setClick({ 
         clicked: true, 
@@ -129,7 +128,7 @@ const Card = ({ data, setClick, filter }) => {
         data: data,
       })}>
 
-      <div className="header">
+      <div className="Header">
         <Label 
           text={'Pro'} 
           hidden={data[enums.professional] ? false: true} 
@@ -152,11 +151,11 @@ const Card = ({ data, setClick, filter }) => {
           selected={filter === enums.youth} />
       </div>
 
-      <div className='content'>
-        <span className='symbol'>{data[enums.symbol]}</span>
-        <span className="sport">{data[enums.sportName]}</span>
-        <span className="participants">{numParticipants}</span>
-        <span className="gender">{data[enums.gender]}</span>
+      <div className='Content'>
+        <span className='Symbol'>{data[enums.symbol]}</span>
+        <span className="Sport">{data[enums.sportName]}</span>
+        <span className="Participants">{numParticipants}</span>
+        <span className="Gender">{data[enums.gender]}</span>
       </div>
 
     </div>

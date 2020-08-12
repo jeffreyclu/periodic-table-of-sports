@@ -1,16 +1,13 @@
 import React from 'react';
 import './filter.styles.css';
 
-// const Filter = ({ filter, filterType, setFilter, text }) => (
-//   <button className="filter" type="submit" onClick={() => {
-//     return setFilter({ clicked: !filter.clicked, filterType: filter.clicked ? '' : filterType }); 
-//   }}>{text}</button>
-// )
-
+/**
+ * Filter checkbox component
+ */
 const Filter =({ filter, newFilter, setFilter }) => {
   return(
     <>
-      <label className='filter'>
+      <label className='Filter'>
         <input 
           type='checkbox'
           checked={filter === newFilter}

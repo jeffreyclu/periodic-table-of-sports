@@ -78,10 +78,10 @@ const CardContainer = ({ cards, setClick, filter, sort }) => {
       filter={filter} />)
   });
   return(
-    <div className="container">
+    <div className="Container">
       {cardArray.length > 1 && <SortToggle sortUp={sortUp} setsortUp={setsortUp} />}
       {cardArray}
-      <span className="type">{`${sort}: ${cards[0][sort]}`}</span>
+      <span className="ContainerType">{`${sort}: ${cards[0][sort]}`}</span>
     </div>
   );
 }

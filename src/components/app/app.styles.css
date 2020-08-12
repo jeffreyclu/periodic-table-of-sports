@@ -30,19 +30,19 @@
   font-size: 3rem;
 }
 
-.Sort {
+/* .Sort {
   position: fixed;
   top: 1rem;
   left: 26.5rem;
   animation: FadeIn 0.5s;
-}
+} */
 
-.Filter {
+/* .Filter {
   position: fixed;
   top: 6rem;
   left: 26.5rem;
   animation: FadeIn 0.5s;
-}
+} */
 
 .Out {
   opacity: 0;

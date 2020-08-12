@@ -5,8 +5,11 @@ import Filter from '../filter/filter';
 import Sort from '../sort/sort';
 import enums from '../../data/enums';
 
+/**
+ * Group by category checkbox component
+ */
 const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) => (<>
-  <label className='filter'>
+  <label className='Filter'>
       <input 
         type='checkbox'
         checked={categoryGroupToggle}
@@ -15,6 +18,9 @@ const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) =>
   </label>
 </>);
 
+/**
+ * User interaction menu component
+ */
 const InteractionMenu = ({ filter, setFilter, sort, setSort, categoryGroupToggle, setCategoryGroupToggle }) => {
   return(
     <div className='InteractionMenu'>

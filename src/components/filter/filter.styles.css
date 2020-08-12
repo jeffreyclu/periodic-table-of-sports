@@ -1,22 +1,4 @@
-/* .filter {
-  box-sizing: border-box;
-  padding: 1rem;
-  margin: 1.2rem 1rem;
-  border-radius: 1rem;
-  font-size: 2rem;
-  outline: none;
-  border: none;
-  box-shadow: 0px 10px 0px grey;
-  width: 15rem;
-}
-
-.filter:hover {
-  transform: translateY(2px);
-  box-shadow: 0px 8px 0px grey;
-  background-color: pink;
-} */
-
-.filter {
+.Filter {
   color: white;
   font-size: 1.6rem;
 }

@@ -1,10 +1,10 @@
-.container {
+.Container {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
 }
 
-.type {
+.ContainerType {
   color: white;
   text-align: center;
   margin: 1rem 0;

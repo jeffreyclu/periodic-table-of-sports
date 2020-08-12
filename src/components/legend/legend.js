@@ -2,16 +2,9 @@ import React from 'react';
 
 import './legend.styles.css';
 
-// const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) => (<>
-//   <label className='filter'>
-//       <input 
-//         type='checkbox'
-//         checked={categoryGroupToggle}
-//         onChange={() => setCategoryGroupToggle(!categoryGroupToggle)}/>
-//       Group by Category
-//   </label>
-// </>);
-
+/**
+ * Legend component
+ */
 const Legend = ({ filter, setFilter, categoryGroupToggle, setCategoryGroupToggle }) => {
   const colors = [['orange', 'Club & Stringed'], ['blue', 'Accuracy'], ['green', 'Combat & Weightlifting'], ['grey', 'Performative'], ['red', 'Racing'], ['skyblue', 'Team'], ['purple', "eSports"]];
 
@@ -20,9 +13,6 @@ const Legend = ({ filter, setFilter, categoryGroupToggle, setCategoryGroupToggle
     <div className='Legend'>
       <div className='LegendCard'><span className='LegendText'>Categories:</span></div>
       {legendCards}
-      {/* <CategoryGroupToggle 
-        categoryGroupToggle={categoryGroupToggle}
-        setCategoryGroupToggle={setCategoryGroupToggle} /> */}
     </div>
   );
 }

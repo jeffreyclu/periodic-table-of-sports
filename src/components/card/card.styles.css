@@ -1,17 +1,17 @@
-.hidden {
+.Hidden {
   opacity: 0;
 }
 
-.filtered {
+.Filtered {
   opacity: 0.1;
 }
 
-.selected {
+.Selected {
   text-decoration: underline;
   color: rgb(255,255,255) !important;
 }
 
-.card {
+.Card {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -27,48 +27,47 @@
   text-align: center;
 }
 
-.card:hover {
+.Card:hover {
   transform: scale(1.5, 1.5);
   z-index: 1;
   border: 0.2rem solid white;
 }
 
-.header {
+.Header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
 
-.label {
+.Label {
   margin: 0rem 0.2rem;
   font-size: 0.5rem;
   color:white;
   font-weight: bold;
 }
 
-.content {
+.Content {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
 }
 
-.symbol {
-  margin: 2rem;
+.Symbol {
+  margin-bottom: 1rem;
   font-size: 4rem;
 }
 
-.sport {
-  font-size: 1.4rem;
+.Sport {
+  font-size: 1.3rem;
   font-weight: bold;
-  height: 3.5rem;
+  min-height: 3rem;
 }
 
-.participants {
+.Participants {
   font-size: 1rem;
 }
 
-.gender {
+.Gender {
   position: absolute;
   bottom: 0;
   left: 1rem;
