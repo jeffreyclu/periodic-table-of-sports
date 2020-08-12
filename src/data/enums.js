@@ -24,6 +24,15 @@ const enums = {
   contact: 'Contact (1-5)',
   crowdSize: 'Crowd Size (1-5)',
   intensity: 'Intensity',
+  category: 'Category',
+  categorySort: 'Category Sort',
+  orange: 'Orange',
+  darkBlue: 'Dark Blue',
+  green: 'Green',
+  grey: 'Grey',
+  red: 'Red',
+  lightBlue: 'Light Blue',
+  purple: 'Purple',
 }
 
 export default enums;

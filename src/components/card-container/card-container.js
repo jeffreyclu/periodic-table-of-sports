@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../card/card';
+
 import './card-container.styles.css';
+import enums from '../../data/enums';
+
 
 
 /**
@@ -18,8 +21,8 @@ const chunkArray = (array, chunkSize) => {
 /**
  * group of cards based on color
  */
-const ColorGroup = ({ colorGroups, setClick, filter, sort }) => {
-  const secondaryGroups = Object.values(colorGroups)
+const PrimaryGroup = ({ primaryGroups, setClick, filter, sort }) => {
+  const secondaryGroups = Object.values(primaryGroups)
     .map((secondaryGroups, i) => {
       return <SecondaryGroup 
         key={`secondaryGroup${i}`}
@@ -59,7 +62,15 @@ const SecondaryGroup = ({ secondaryGroups, setClick, filter, sort }) => {
  * vertical column of cards
  */
 const CardContainer = ({ cards, setClick, filter, sort }) => {
-  const cardArray = cards.map((card, i) => {
+  const [sortUp, setsortUp] = useState(true);
+
+  const intensitySort = (a, b) => {
+    const aIntensity = parseInt(a[enums.intensity]);
+    const bIntensity = parseInt(b[enums.intensity]);
+    if (sortUp) return (aIntensity - bIntensity);
+    else return (bIntensity - aIntensity);
+  }
+  const cardArray = cards.sort(intensitySort).map((card, i) => {
     return (<Card
       key={`card${i}`} 
       data={card} 
@@ -68,10 +79,25 @@ const CardContainer = ({ cards, setClick, filter, sort }) => {
   });
   return(
     <div className="container">
+      {cardArray.length > 1 && <SortToggle sortUp={sortUp} setsortUp={setsortUp} />}
       {cardArray}
       <span className="type">{`${sort}: ${cards[0][sort]}`}</span>
     </div>
   );
 }
 
-export default ColorGroup;
+const SortToggle = ({ sortUp, setsortUp }) => {
+  return(
+    <div onClick={() => setsortUp(!sortUp)} >
+      <span className='SortToggle'>
+        {sortUp ? 'Sorted by Intensity ↓' : 'Sorted by Intensity ↑'}
+      </span>
+    </div>
+  )
+}
+
+export default CardContainer;
+export {
+  PrimaryGroup,
+  SecondaryGroup,
+}

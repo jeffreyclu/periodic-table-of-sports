@@ -1,6 +1,7 @@
 .AppContainer {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .App {
@@ -12,12 +13,12 @@
 }
 
 .CardContainer {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-end;
-  overflow: scroll;
-  position: relative;
+  overflow-x: scroll;
   margin: 0 4rem 0 4rem;
   height: 100vh;
 }
@@ -30,11 +31,30 @@
 }
 
 .Sort {
+  position: fixed;
   top: 1rem;
-  left: 1rem;
+  left: 26.5rem;
+  animation: FadeIn 0.5s;
 }
 
 .Filter {
+  position: fixed;
   top: 6rem;
-  left: 1rem;
+  left: 26.5rem;
+  animation: FadeIn 0.5s;
+}
+
+.Out {
+  opacity: 0;
+  animation: FadeOut 0.5s;
+}
+
+@keyframes FadeIn {
+  0% { opacity: 0;}
+  100% { opactiy: 100; }
+}
+
+@keyframes FadeOut {
+  0% { opacity: 100;}
+  100% { opactiy: 0; }
 }

@@ -1,0 +1,19 @@
+.Legend {
+  position: fixed;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  top: 2rem;
+  left: 26.5rem;
+}
+
+.LegendCard {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.LegendText {
+  color: white;
+}

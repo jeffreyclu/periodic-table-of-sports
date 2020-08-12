@@ -11,6 +11,8 @@
   box-shadow: -10px 10px 15px #353535;
   z-index: 2;
   animation: flyin 0.3s;
+  line-height: 1.25rem;
+  overflow-y: scroll;
 }
 
 .x {
@@ -19,8 +21,8 @@
   top: 2rem;
   color: white;
   font-weight: bold;
-  font-size: 3.5rem;
-  padding: 0rem 0.9rem;
+  /* font-size: 3.5rem; */
+  padding: 0.9rem 0.9rem;
   border-radius: 4rem;
   background-color: lightgrey;
 }

@@ -25,27 +25,30 @@ const Label = ({ text, hidden, selected }) => {
 const Card = ({ data, setClick, filter }) => {
 
   const cardStyle = {
-    backgroundColor: "",
+    backgroundColor: '',
   };
 
   switch (data[enums.color]) {
-    case ('Orange'):
+    case (enums.orange):
       cardStyle.backgroundColor = 'orange';
       break;
-    case ('Dark Blue'):
+    case (enums.darkBlue):
       cardStyle.backgroundColor = 'blue';
       break;
-    case ('Grey') : 
+    case (enums.grey) : 
       cardStyle.backgroundColor = 'grey';
       break;
-    case ('Red'):
+    case (enums.red):
       cardStyle.backgroundColor = 'Red';
       break;
-    case ('Light Blue'):
+    case (enums.lightBlue):
       cardStyle.backgroundColor = 'skyblue';
       break;
-    case ('Green'):
-      cardStyle.backgroundColor = 'Green';
+    case (enums.green):
+      cardStyle.backgroundColor = 'green';
+      break;
+    case (enums.purple):
+      cardStyle.backgroundColor = 'purple';
       break;
     default:
       break;
@@ -53,7 +56,7 @@ const Card = ({ data, setClick, filter }) => {
 
   let filtered;
 
-  console.log('filter->', filter)
+  // console.log('filter->', filter)
 
   switch(filter) {
     case (enums.team):

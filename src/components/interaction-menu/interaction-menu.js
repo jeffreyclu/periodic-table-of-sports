@@ -5,7 +5,17 @@ import Filter from '../filter/filter';
 import Sort from '../sort/sort';
 import enums from '../../data/enums';
 
-const InteractionMenu = ({ filter, setFilter, setSort }) => {
+const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) => (<>
+  <label className='filter'>
+      <input 
+        type='checkbox'
+        checked={categoryGroupToggle}
+        onChange={() => setCategoryGroupToggle(!categoryGroupToggle)}/>
+      Group by Category
+  </label>
+</>);
+
+const InteractionMenu = ({ filter, setFilter, sort, setSort, categoryGroupToggle, setCategoryGroupToggle }) => {
   return(
     <div className='InteractionMenu'>
       <div className='FilterContainer'>
@@ -41,12 +51,13 @@ const InteractionMenu = ({ filter, setFilter, setSort }) => {
             Filter */}
       <hr />
       <div className='FilterContainer'>
-        <h2>Sort By</h2>
-        <Sort sort={enums.type} setSort={setSort} />
-        <Sort sort={enums.maxParticipants} setSort={setSort} />
-        <Sort sort={enums.cost} setSort={setSort} />
-        <Sort sort={enums.crowdSize} setSort={setSort} />
-        <Sort sort={enums.contact} setSort={setSort} />
+        <h2>Horizontal Sort</h2>
+        <CategoryGroupToggle categoryGroupToggle={categoryGroupToggle} setCategoryGroupToggle={setCategoryGroupToggle} />
+        <Sort currentSort={sort} newSort={enums.type} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.maxParticipants} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.cost} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.crowdSize} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.contact} setSort={setSort} />
       </div>
     </div>
   )

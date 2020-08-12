@@ -15,14 +15,15 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-evenly;
   color: white;
   box-sizing: border-box;
   padding: 1rem;
   margin: 0.5rem;
   transition: transform 0.4s, opacity 0.5s;
   border-radius: 1rem;
-  width: 12rem;
-  height: 17.5rem;
+  height: calc(100vh / 8);
+  width: 12.5rem;
   text-align: center;
 }
 
@@ -41,7 +42,7 @@
 .label {
   margin: 0rem 0.2rem;
   font-size: 0.5rem;
-  color: rgb(201, 201, 201);
+  color:white;
   font-weight: bold;
 }
 
@@ -54,12 +55,13 @@
 
 .symbol {
   margin: 2rem;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 .sport {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  height: 3.5rem;
 }
 
 .participants {
