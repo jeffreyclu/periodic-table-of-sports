@@ -1,4 +1,5 @@
 import React from 'react';
+import shuffle from 'lodash/shuffle';
 
 import './interaction-menu.styles.css';
 import Filter from '../filter/filter';
@@ -21,7 +22,7 @@ const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) =>
 /**
  * User interaction menu component
  */
-const InteractionMenu = ({ filter, setFilter, sort, setSort, categoryGroupToggle, setCategoryGroupToggle }) => {
+const InteractionMenu = ({ cards, setCards, filter, setFilter, sort, setSort, categoryGroupToggle, setCategoryGroupToggle }) => {
   return(
     <div className='InteractionMenu'>
       <div className='FilterContainer'>
@@ -64,6 +65,11 @@ const InteractionMenu = ({ filter, setFilter, sort, setSort, categoryGroupToggle
         <Sort currentSort={sort} newSort={enums.cost} setSort={setSort} />
         <Sort currentSort={sort} newSort={enums.crowdSize} setSort={setSort} />
         <Sort currentSort={sort} newSort={enums.contact} setSort={setSort} />
+      </div>
+      <hr />
+      <div className='FilterContainer'>
+        <h2>Shuffle</h2>
+        <button type='submit' className='Sort' onClick={() => setCards(shuffle)}>Random Shuffle</button>
       </div>
     </div>
   )

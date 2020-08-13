@@ -17,7 +17,7 @@ const Sort = ({ currentSort, newSort, setSort }) => {
   return (
     <button 
       style={sortStyle}
-      className='sort' 
+      className='Sort' 
       type='submit' 
       onClick={() =>setSort(newSort)}>
         {newSort}
