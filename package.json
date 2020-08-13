@@ -8,9 +8,11 @@
     "@testing-library/user-event": "^7.2.1",
     "convert-excel-to-json": "^1.7.0",
     "eslint-config-airbnb": "^18.2.0",
+    "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-spring": "^8.0.27"
   },
   "scripts": {
     "start": "react-scripts start",

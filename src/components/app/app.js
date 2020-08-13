@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { PrimaryGroup, SecondaryGroup } from '../card-container/card-container';
 import InfoMenu from '../info-menu/info-menu';
 import InteractionMenu from '../interaction-menu/interaction-menu';
@@ -71,7 +72,9 @@ const App = () => {
   return (
     <div className="AppContainer">
       <div className="App">
-        <InteractionMenu 
+        <InteractionMenu
+          cards={cards}
+          setCards={setCards}
           filter={filter} 
           setFilter={setFilter} 
           sort={sort}
