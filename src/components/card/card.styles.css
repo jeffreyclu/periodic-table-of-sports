@@ -41,7 +41,7 @@
 
 .Label {
   margin: 0rem 0.2rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   color:white;
   font-weight: bold;
 }
@@ -71,5 +71,5 @@
   position: absolute;
   bottom: 0;
   left: 1rem;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
