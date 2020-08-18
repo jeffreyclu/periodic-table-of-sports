@@ -9,9 +9,10 @@ const Filter =({ filter, newFilter, setFilter }) => {
     <>
       <label className='Filter'>
         <input 
+          id={`${newFilter}Filter`}
           type='checkbox'
           checked={filter === newFilter}
-          onChange={() => setFilter(filter === newFilter ? '' : newFilter)}/>
+          onChange={() => setFilter(filter === newFilter ? '' : newFilter)} />
         {newFilter}
       </label>
     </>

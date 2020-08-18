@@ -38,6 +38,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "puppeteer": "^5.2.1",
+    "react-pinpoint": "0.0.1-beta.6"
   }
 }

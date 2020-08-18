@@ -14,7 +14,7 @@ const CategoryGroupToggle = ({ categoryGroupToggle, setCategoryGroupToggle }) =>
       <input 
         type='checkbox'
         checked={categoryGroupToggle}
-        onChange={() => setCategoryGroupToggle(!categoryGroupToggle)}/>
+        onChange={() => setCategoryGroupToggle(!categoryGroupToggle)} />
       Group by Category
   </label>
 </>);
