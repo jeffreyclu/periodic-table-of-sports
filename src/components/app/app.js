@@ -6,7 +6,7 @@ import InteractionMenu from '../interaction-menu/interaction-menu';
 import Legend from '../legend/legend';
 
 import './app.styles.css';
-import * as newData from '../../data/data.json';
+// import * as newData from '../../data/data.json';
 import enums from '../../data/enums';
 
 const App = () => {
@@ -17,33 +17,49 @@ const App = () => {
   const [categoryGroupToggle, setCategoryGroupToggle] = useState(true);
   
   useEffect(() => {
-    const intensitySorted = newData.data;
+    const fetchSpreadSheetData = async () => {
+      const resp = await fetch(`${process.env.REACT_APP_SPREADSHEET_LINK}`);
+      const res = await resp.json();
 
-    const primaryGrouped = groupBy(intensitySorted, sort);
+      let data = res.values;
+      const keys = res.values.shift();
+      data = data.map((row) => {
+        const rowData = {};
+        row.forEach((item, i) => {
+          rowData[keys[i]] = item;
+        })
+        return rowData;
+      })
 
-    const categoryGrouped = groupBy(intensitySorted, enums.categorySort);
-    const secondaryGrouped = Object.values(categoryGrouped).map((colorGroup) => groupBy(colorGroup, sort));
+      const intensitySorted = data.sort(intensitySort);
 
-    const cardArray = categoryGroupToggle 
-      ? Object.values(secondaryGrouped)
-        .map((primaryGroups, i) => <PrimaryGroup 
-          key={`cards${i}`}
-          primaryGroups={primaryGroups}
-          setClick={setClick}
-          clicked={clicked}
-          filter={filter}
-          sort={sort}
-        />)
-      : Object.values(primaryGrouped)
-        .map((secondaryGroups, i) => <SecondaryGroup 
-          key={`cards${i}`}
-          secondaryGroups={secondaryGroups}
-          setClick={setClick}
-          clicked={clicked}
-          filter={filter}
-          sort={sort}
-        />)
-    setCards(cardArray);
+      const primaryGrouped = groupBy(intensitySorted, sort);
+
+      const categoryGrouped = groupBy(intensitySorted, enums.categorySort);
+      const secondaryGrouped = Object.values(categoryGrouped).map((colorGroup) => groupBy(colorGroup, sort));
+
+      const cardArray = categoryGroupToggle 
+        ? Object.values(secondaryGrouped)
+          .map((primaryGroups, i) => <PrimaryGroup 
+            key={`cards${i}`}
+            primaryGroups={primaryGroups}
+            setClick={setClick}
+            clicked={clicked}
+            filter={filter}
+            sort={sort}
+          />)
+        : Object.values(primaryGrouped)
+          .map((secondaryGroups, i) => <SecondaryGroup 
+            key={`cards${i}`}
+            secondaryGroups={secondaryGroups}
+            setClick={setClick}
+            clicked={clicked}
+            filter={filter}
+            sort={sort}
+          />)
+      setCards(cardArray);
+    }
+    fetchSpreadSheetData();
   }, [clicked, filter, sort, categoryGroupToggle]);
   
   const groupBy = (array, key) => {
@@ -53,21 +69,11 @@ const App = () => {
     }, {});
   }
 
-  // const intensitySort = (a, b) => {
-  //   const aIntensity = parseInt(a[enums.intensity]);
-  //   const bIntensity = parseInt(b[enums.intensity]);
-  //   return (aIntensity - bIntensity);
-  // }
-
-  // const shuffle = (array) => {
-  //   for (let i = array.length - 1; i > 0; i--) {
-  //     const j = Math.floor(Math.random() * i)
-  //     const temp = array[i]
-  //     array[i] = array[j]
-  //     array[j] = temp
-  //   }
-  //   return array;
-  // }
+  const intensitySort = (a, b) => {
+    const aIntensity = parseInt(a[enums.intensity]);
+    const bIntensity = parseInt(b[enums.intensity]);
+    return (aIntensity - bIntensity);
+  }
 
   return (
     <div className="AppContainer">
