@@ -1,9 +1,0 @@
-FROM buildkite/puppeteer:5.2.1
-
-WORKDIR /tests
-
-COPY package-lock.json package.json ./
-
-RUN npm ci
-
-COPY . .

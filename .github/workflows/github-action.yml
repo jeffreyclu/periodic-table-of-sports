@@ -1,9 +1,0 @@
-name: yeah
-on: push
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: React Pinpoint Build
-        run: docker-compose up --build --abort-on-container-exit
