@@ -7,8 +7,9 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "convert-excel-to-json": "^1.7.0",
+    "dotenv": "^8.2.0",
     "eslint-config-airbnb": "^18.2.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -40,6 +41,6 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "puppeteer": "^5.2.1",
-    "react-pinpoint": "0.0.1-beta.6"
+    "react-pinpoint": "0.0.0-development"
   }
 }
