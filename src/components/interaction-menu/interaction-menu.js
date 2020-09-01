@@ -65,6 +65,9 @@ const InteractionMenu = ({ cards, setCards, filter, setFilter, sort, setSort, ca
         <Sort currentSort={sort} newSort={enums.cost} setSort={setSort} />
         <Sort currentSort={sort} newSort={enums.crowdSize} setSort={setSort} />
         <Sort currentSort={sort} newSort={enums.contact} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.placeholderA} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.placeholderB} setSort={setSort} />
+        <Sort currentSort={sort} newSort={enums.placeholderC} setSort={setSort} />
       </div>
       <hr />
       <div className='FilterContainer'>
