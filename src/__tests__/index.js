@@ -8,19 +8,18 @@ beforeEach(async () => {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   page = await browser.newPage();
-  const url = "http://webapp:3000";
+  const url = "http://localhost:3000";
   const rootId = "#root";
   await reactPinpoint.recordTest(page, url, rootId);
 })
 
 afterEach(async () => {
   const slowRenders = await reactPinpoint.reportTestResults(page, 1);
-  console.log('kent c doods has:', slowRenders.length, 'slow renders');
+  console.log('Slow renders:', slowRenders);
   await browser.close();
 })
 
-test("filters professional sports", async () => {
-  // await page.waitForSelector("#ProFilter")
+test("checkbox should be checkable", async () => {
   await page.click("#ProFilter");
 
   const result = await page.evaluate(() => {
