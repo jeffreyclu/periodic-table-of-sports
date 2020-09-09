@@ -45,7 +45,13 @@ const Card = ({ data, setClick, filter }) => {
   // loop through the filter object
   for (const [key, value] of Object.entries(filter)) {
     // if the filter value is true but the card data does not have the corresponding value, then filter it
-    if (value && !data[key]) {
+    if (key === enums.crowdSize && value && parseInt(data[key]) < 3) {
+      filtered = true;
+    }
+    else if (key === enums.intensity && value && parseInt(data[key]) < 8) {
+      filtered = true;
+    }
+    else if (value && !data[key]) {
       filtered = true;
     }
   }
