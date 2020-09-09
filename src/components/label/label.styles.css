@@ -1,0 +1,15 @@
+.Label {
+  margin: 0rem 0.2rem;
+  font-size: 0.8rem;
+  color:white;
+  font-weight: bold;
+}
+
+.Hidden {
+  opacity: 0;
+}
+
+.Selected {
+  text-decoration: underline;
+  color: rgb(255,255,255) !important;
+}
