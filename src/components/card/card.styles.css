@@ -1,16 +1,3 @@
-.Hidden {
-  opacity: 0;
-}
-
-.Filtered {
-  opacity: 0.1;
-}
-
-.Selected {
-  text-decoration: underline;
-  color: rgb(255,255,255) !important;
-}
-
 .Card {
   position: relative;
   display: flex;
@@ -33,17 +20,14 @@
   border: 0.2rem solid white;
 }
 
+.Filtered {
+  opacity: 0.1;
+}
+
 .Header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-}
-
-.Label {
-  margin: 0rem 0.2rem;
-  font-size: 0.8rem;
-  color:white;
-  font-weight: bold;
 }
 
 .Content {
