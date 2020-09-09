@@ -10,65 +10,92 @@ import './app.styles.css';
 import enums from '../../data/enums';
 
 const App = () => {
+  const [data, setData] = useState([]);
   const [cards, setCards] = useState([]);
   const [clicked, setClick] = useState({ clicked: false, keyword: [], data: {} });
-  const [filter, setFilter] = useState({ clicked: false, filter: '' });
   const [sort, setSort] = useState(enums.type);
   const [categoryGroupToggle, setCategoryGroupToggle] = useState(true);
+  // const [filter, setFilter] = useState({ clicked: false, filter: "" });
+  const [filter, setFilter] = useState({
+    [enums.professional]: false,
+    [enums.olympic]: false,
+    [enums.paralympic]: false,
+    [enums.college]: false,
+    [enums.youth]: false,
+    [enums.team]: false,
+    [enums.pool]: false,
+    [enums.openWater]: false,
+    [enums.indoor]: false,
+    [enums.outdoor]: false,
+    [enums.digital]: false,
+    [enums.winterSport]: false,
+    [enums.eSport]: false,
+    [enums.racing]: false,
+    [enums.crowdSize]: false,
+    [enums.intensity]: false,
+  });
   
   useEffect(() => {
     const fetchSpreadSheetData = async () => {
       const resp = await fetch(`${process.env.REACT_APP_SPREADSHEET_LINK}`);
       const res = await resp.json();
 
-      let data = res.values;
-      const keys = res.values.shift();
-      data = data.map((row) => {
+      let fetchedData = res.values;
+      const keys = res.values.shift(); // remove first row as it is an array of column headers
+      // TODO use these headers to create filters and sort buttons programatically?
+      fetchedData = fetchedData.map((row) => {
         const rowData = {};
         row.forEach((item, i) => {
           rowData[keys[i]] = item;
         })
         return rowData;
       })
-
-      const intensitySorted = data.sort(intensitySort);
-
-      const primaryGrouped = groupBy(intensitySorted, sort);
-
-      const categoryGrouped = groupBy(intensitySorted, enums.categorySort);
-      const secondaryGrouped = Object.values(categoryGrouped).map((colorGroup) => groupBy(colorGroup, sort));
-
-      const cardArray = categoryGroupToggle 
-        ? Object.values(secondaryGrouped)
-          .map((primaryGroups, i) => <PrimaryGroup 
-            key={`cards${i}`}
-            primaryGroups={primaryGroups}
-            setClick={setClick}
-            clicked={clicked}
-            filter={filter}
-            sort={sort}
-          />)
-        : Object.values(primaryGrouped)
-          .map((secondaryGroups, i) => <SecondaryGroup 
-            key={`cards${i}`}
-            secondaryGroups={secondaryGroups}
-            setClick={setClick}
-            clicked={clicked}
-            filter={filter}
-            sort={sort}
-          />)
-      setCards(cardArray);
+      setData(fetchedData);
     }
     fetchSpreadSheetData();
-  }, [clicked, filter, sort, categoryGroupToggle]);
-  
+  }, []);
+
+  useEffect(() => {
+    const intensitySorted = data.sort(intensitySort);
+
+    const primaryGrouped = groupBy(intensitySorted, sort);
+    const categoryGrouped = groupBy(intensitySorted, enums.categorySort);
+    const secondaryGrouped = Object.values(categoryGrouped).map((colorGroup) => groupBy(colorGroup, sort));
+
+    const cardArray = categoryGroupToggle 
+      ? Object.values(secondaryGrouped)
+        .map((primaryGroups, i) => <PrimaryGroup 
+          key={`cards${i}`}
+          primaryGroups={primaryGroups}
+          setClick={setClick}
+          clicked={clicked}
+          filter={filter}
+          sort={sort}
+        />)
+      : Object.values(primaryGrouped)
+        .map((secondaryGroups, i) => <SecondaryGroup 
+          key={`cards${i}`}
+          secondaryGroups={secondaryGroups}
+          setClick={setClick}
+          clicked={clicked}
+          filter={filter}
+          sort={sort}
+        />)
+    setCards(cardArray);
+  }, [data, clicked, categoryGroupToggle, filter, sort]);
+
+  /**
+   * Helper function to group elements in an array by a given key
+   */
   const groupBy = (array, key) => {
     return array.reduce((acc, curr) => {
       (acc[curr[key]] = acc[curr[key]] || []).push(curr);
       return acc;
     }, {});
   }
-
+  /**
+   * Helper function to sort by intensity from low to high
+   */
   const intensitySort = (a, b) => {
     const aIntensity = parseInt(a[enums.intensity]);
     const bIntensity = parseInt(b[enums.intensity]);
@@ -88,8 +115,6 @@ const App = () => {
           categoryGroupToggle={categoryGroupToggle}
           setCategoryGroupToggle={setCategoryGroupToggle} />
         <div className='CardContainer'>
-          {/* <span className='Sort StatusLabel'>Sorted by: {sort}</span> */}
-          {/* {filter.length > 0 && <span className='Filter StatusLabel'>Filtered by: {filter}</span>} */}
           <Legend 
             filter={filter}
             setFilter={setFilter}
