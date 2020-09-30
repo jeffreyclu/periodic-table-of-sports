@@ -37,10 +37,8 @@ const App = () => {
   
   useEffect(() => {
     const fetchSpreadSheetData = async () => {
-      console.log('link ->', process.env.REACT_APP_SPREADSHEET_LINK);
       const resp = await fetch(`${process.env.REACT_APP_SPREADSHEET_LINK}`);
       const res = await resp.json();
-      console.log('res ->', res);
 
       let fetchedData = res.values;
       const keys = res.values.shift(); // remove first row as it is an array of column headers
