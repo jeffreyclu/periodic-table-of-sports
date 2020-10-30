@@ -13,7 +13,7 @@
 
 This project is a collaboration with the Sports team at Perkins Eastman. The Periodic Table of Sports presents over 80 differrent sports in a "periodic table" format. The table is sortable by different attributes such as Type and Cost, and filterable by attributes such as Professional or Olympic sports.
 
-![Screen Shot 2020-10-30 at 10.27.20 AM](README.assets/Screen Shot 2020-10-30 at 10.27.20 AM.png)
+![Screen Shot 2020-10-30 at 10.27.20 AM](https://raw.githubusercontent.com/jeffreyclu/periodic-table-of-sports/3da247b9fe008a806cf2f81d3e757fbd78ce900f/README.assets/Screen%20Shot%202020-10-30%20at%2010.27.20%20AM.png)
 
 ## Architecture
 
